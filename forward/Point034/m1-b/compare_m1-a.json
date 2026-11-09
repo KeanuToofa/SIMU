@@ -1,0 +1,48 @@
+{
+  "identical": true,
+  "files": [
+    {
+      "path": "heat_flux_advective.csv",
+      "match": true,
+      "detail": "",
+      "arrays": []
+    },
+    {
+      "path": "heat_flux_conductive.csv",
+      "match": true,
+      "detail": "",
+      "arrays": []
+    },
+    {
+      "path": "metadata.json",
+      "match": true,
+      "detail": "",
+      "arrays": []
+    },
+    {
+      "path": "residuals.csv",
+      "match": true,
+      "detail": "",
+      "arrays": []
+    },
+    {
+      "path": "temperature.csv",
+      "match": true,
+      "detail": "",
+      "arrays": []
+    },
+    {
+      "path": "water_flux.csv",
+      "match": true,
+      "detail": "",
+      "arrays": []
+    },
+    {
+      "path": "water_flux_field.csv",
+      "match": true,
+      "detail": "",
+      "arrays": []
+    }
+  ],
+  "recipe_differences": []
+}

@@ -1,0 +1,19 @@
+cgshome=/Users/yunus-emre/.cgs/simu-m1-b (from current directory) use_case=standalone
+source=/Users/yunus-emre/.cgs/simu-m1-b/.cgitsync/state/6d8f920f5b6f30210da23af64d86fd94dd27062aa2ed9018b3100224d9934677.gts (from ledger)
+environment=env(3c5548512e6d41bbd8b3f51260ce231230514e8bdadfbbdc3259b5038245b4d9)
+environment_root=undeclared
+machine architecture=arm64 pixi_platform=osx-arm64 os=macos os_version=27.0.1 libc=none libc_version=none kernel=27.0.0
+tool cgitsync version=6.10.0 raw=6.10.0
+tool dvc version=none raw=none
+tool gh version=2.103.3 raw=gh version 2.103.3 (2026-10-26)
+tool git version=2.55.0 raw=git version 2.55.0
+tool git-lfs version=none raw=none
+tool pixi version=0.81.0 raw=pixi 0.81.0
+tool python version=3.11.15 raw=3.11.15
+tool ssh version=10.3 raw=OpenSSH_10.3p1, LibreSSL 3.3.6
+credential provider=github tool=gh available=true authenticated=true
+manifest repository=root:Molonaviz path=Molonaviz/pixi.lock digest=sha256:3ea479dd5837b542e63d2f805cb3c4c6cb3d27ab74ceae5821d216df83007c3d platforms=linux-64,osx-64,osx-arm64,win-64
+manifest repository=root:Molonaviz path=Molonaviz/pixi.toml digest=sha256:b0677718f4e7507ec31fb74175730944ee207135e64cdaf1f7f9efa80bdc5acc platforms=none
+manifest repository=root:Molonaviz path=Molonaviz/pyproject.toml digest=sha256:1fe0e47ac6451125d89503c1da94bd6f86dfd40f7d0e7f10560737f1c65267f0 platforms=none
+manifest repository=root path=pixi.lock digest=sha256:9bfa62bb666efeca945120b0f17ffbcd7e1a45c00638c0c4fe7fa697ee61ca61 platforms=linux-64,osx-64,osx-arm64,win-64
+manifest repository=root path=pixi.toml digest=sha256:859e6eadf986d9782e585032d437f4ff6c0cc5c8f03cc7daab0e8a68dc2b7f93 platforms=none
