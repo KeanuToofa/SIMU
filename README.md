@@ -43,7 +43,7 @@ Le dossier est local, hors git (`docs/` n'est pas suivi). Pour le passer à un a
 | `reference/simu_direct.sh` | Copie du script de calcul, d'export et de comparaison | Lecture seule |
 | `reference/t11.md`, `reference/PR_t11.md` | Plan et description de PR du lot T11 qui a créé tout cela | Historique |
 
-Les copies de `reference/` datent du 2026-11-09. Les scripts utilisent toujours les versions de la branche `CGS-MOLO` (la racine de MOLONARI1D et `scripts/simu_direct.sh`), jamais ces copies.
+Les copies de `reference/` datent du 2026-11-09. Les scripts utilisent toujours les versions de la branche `WORK-KEANU` de MOLONARI1D (`simu-direct.cgs` et `scripts/simu_direct.sh`), jamais ces copies.
 
 ## 2. Pourquoi ComplexGitSync est central
 
@@ -64,7 +64,7 @@ Le manifeste complet, `simu-direct.cgs` :
 ```toml
 project = { name = "MOLONARI1D", default_branch = "CGS-MOLO" }
 repos = [
-    { repository = "github:flipoyo/MOLONARI1D", fallback_branch = "CGS-MOLO" },
+    { repository = "github:flipoyo/MOLONARI1D", default_branch = "WORK-KEANU", fallback_branch = "CGS-MOLO" },
     { repository = "github:flipoyo/MOLONARI-API", relative_path = "Molonaviz" },
     { repository = "github:flipoyo/MOLONARI-data", relative_path = "data" },
     { repository = "github:KeanuToofa/MOLONARI-TWIN", relative_path = "MOLONARI-TWIN" },
@@ -100,9 +100,9 @@ bash 2_monter_et_lancer.sh m1-a  # premier Mac ; m1-b sur le second ; --sans-pus
 
 Un espace ne sert qu'à **un seul calcul**. Chaque exécution commence donc par un montage neuf dans `~/.cgs/simu-<MACHINE>`. Si ce dossier existe déjà, le script refuse.
 
-1. **Manifeste.** Le script télécharge `simu-direct.cgs` depuis la branche `CGS-MOLO` de MOLONARI1D. Les deux Mac partent ainsi du même fichier.
+1. **Manifeste.** Le script télécharge `simu-direct.cgs` depuis la branche `WORK-KEANU` de MOLONARI1D. La racine de l'espace est montée sur `WORK-KEANU`, les autres dépôts sur `CGS-MOLO`. Les deux Mac partent ainsi du même fichier.
 2. **Montage.** `cgitsync bootstrap --cgs-path ~/.cgs [--force-protocol https] simu-direct.cgs simu-m1-a` clone les cinq dépôts à leurs chemins et vérifie les versions des outils. Le montage se termine par `READY ready=true complete=true`.
-3. **Alignement des commits.** `3_aligner_commits.sh` lit le `commits.json` d'une machine déjà présente dans SIMU. Il place MOLONARI1D, Molonaviz, data et MOLONARI-TWIN sur les mêmes commits, en tête détachée. Sur le premier Mac, il n'y a rien à aligner. C'est utile si `CGS-MOLO` a avancé entre les deux montages.
+3. **Alignement des commits.** `3_aligner_commits.sh` lit le `commits.json` d'une machine déjà présente dans SIMU. Il place MOLONARI1D, Molonaviz, data et MOLONARI-TWIN sur les mêmes commits, en tête détachée. Sur le premier Mac, il n'y a rien à aligner. C'est utile si une branche a avancé entre les deux montages.
 4. **Propreté.** La racine de l'espace doit être propre (`git status` vide).
 5. **Environnement de calcul.** `pixi run -e simu simu-direct` lance `scripts/simu_direct.sh` dans l'environnement pixi `simu`. Cet environnement ne contient que `uv`. Le script lance ensuite `uv sync --frozen` dans `Molonaviz/molonari_desk`, qui installe le backend aux versions exactes de `uv.lock` (jax, jaxlib, numpy…).
 
