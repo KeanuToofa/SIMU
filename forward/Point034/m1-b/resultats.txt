@@ -1,9 +1,0 @@
-# mode = direct (en mcmc, le flux d'eau est la moyenne a posteriori)
-water_flux_mean = -4.524782784649976e-07 | -0x1.e5d84839271fbp-22
-heat_total = -20.941052453458433 | -0x1.4f0e8d0476caep+4
-heat_advective = -28.586670606188065 | -0x1.c96300b7b1a2cp+4
-heat_conductive = 7.645618152729631 | 0x1.e951cecceb5f7p+2
-rmse_t1 = 0.12971293629520428 | 0x1.09a6ef9a0c5b7p-3
-rmse_t2 = 0.1099493156253738 | 0x1.c25a36ad41ca8p-4
-rmse_t3 = 0.10767390737942693 | 0x1.b908466d3c187p-4
-rmse_total = 0.11620092968527289 | 0x1.dbf5818c356c3p-4
