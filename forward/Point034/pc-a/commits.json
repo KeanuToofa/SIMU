@@ -1,0 +1,21 @@
+{
+  "MOLONARI-TWIN": {
+    "branch": "CGS-MOLO",
+    "commit": "e4725c1c982e438b4e5b8e42d9d2e59d28de372c"
+  },
+  "MOLONARI1D": {
+    "branch": "WORK-KEANU",
+    "commit": "deee609d4e5ab2d8c7035812fa0c7fabca8539a9"
+  },
+  "Molonaviz": {
+    "branch": "CGS-MOLO",
+    "commit": "08246adb7ca39fc8869a5b3921b5167b164e1877"
+  },
+  "data": {
+    "branch": "CGS-MOLO",
+    "commit": "5aa83c6294428024868f4da4153b13678b41adb4"
+  },
+  "machine": "pc-a",
+  "simu_commit": "02999b929177a04dc6063376fabe7c3aeabfce36",
+  "uname": "Darwin MacBook-Air-de-TOOFA.local 24.5.0 Darwin Kernel Version 24.5.0: Tue Apr 22 19:48:46 PDT 2025; root:xnu-11417.121.6~2/RELEASE_ARM64_T8103 arm64 arm"
+}

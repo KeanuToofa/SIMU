@@ -1,0 +1,114 @@
+{
+  "code_version": "molonari-twin 0.9.0-alpha.2+g08246adb7ca3 · jax 0.11.2",
+  "config": {
+    "code_version": "molonari-twin 0.9.0-alpha.2+g08246adb7ca3 · jax 0.11.2",
+    "data": {
+      "cleaned_sha256": "ff9da4d1a9e8cec9e9ecd99d9a9270c1fc5dfd0c4339f27fb1512293de204a70"
+    },
+    "layers": [
+      {
+        "lambda_s": 3.4,
+        "neg_log10_k": 12.0,
+        "porosity": 0.15,
+        "rhos_cs": 5000000.0,
+        "z_low": 0.4
+      }
+    ],
+    "mode": "direct",
+    "numerics": {
+      "initial_condition": "linear",
+      "nb_cells": 100
+    },
+    "schema": "molonari-twin/2.0.0",
+    "sensors": {
+      "depths": [
+        0.1,
+        0.2,
+        0.3,
+        0.4
+      ],
+      "offset": 0.0,
+      "sigma_pressure": 0.01
+    }
+  },
+  "conventions": {
+    "advective_reference_C": 0.0,
+    "heat_flux": "positive downwards, W/m2",
+    "q": "positive downwards (infiltration), m/s",
+    "z": "positive downwards, m"
+  },
+  "created_at": "2026-11-09T15:26:36",
+  "data": {
+    "cleaned_sha256": "ff9da4d1a9e8cec9e9ecd99d9a9270c1fc5dfd0c4339f27fb1512293de204a70",
+    "code_version": "0.9.0-alpha.2",
+    "end": "2016-07-12T09:15:00",
+    "lab": "lab_point034",
+    "processed": "processed_data/Point034",
+    "rows": 1430,
+    "start": "2016-06-27T12:00:00"
+  },
+  "description": "Modèle direct monocouche, paramètres de sol de twin_01 (valeurs par défaut de Molonaviz), non calibrés",
+  "device": "CPU · float64",
+  "duration_s": 17.744,
+  "experimental": false,
+  "files": {
+    "heat_flux_advective.csv": "f81efedf94f6abaae99c1f44c809899e0b5ff7eae64f4766cf2f71439b97449a",
+    "heat_flux_conductive.csv": "d453d3ec37d8593857058fd76f102d69f00fdc8229499996e00a4a673c363532",
+    "residuals.csv": "40701155f3c4503a7f4c569cabe11516543dd2eb1b76ab81ac556d782a9ef099",
+    "temperature.csv": "106558c09823f7901f42a1a52fe741b4b2c748c6dffaa5d61b952b10b52bb8f2",
+    "water_flux.csv": "e4acf8aec4f86d0aaf0413445a10d6b87993b0c9c228b551b06a018af362f666",
+    "water_flux_field.csv": "ec09ea6867c7c16f32adc0d630ef76c0a5dc4402f1e342322ac05a29c7cc234e"
+  },
+  "flux_convention": "q > 0: infiltration (river to aquifer); q < 0: exfiltration (aquifer to river)",
+  "instruments": {
+    "sigma_pressure_m": 0.01,
+    "sigma_temperature_C": 0.03
+  },
+  "mode": "direct",
+  "name": "twin_direct",
+  "point": "Point034",
+  "provenance": {
+    "cgs_state_sha256": "d9bbbf66a1fa9d2f1ef86971719dcb58a572045341c8a77c629410ca72280e3d",
+    "code": {
+      "branch": "CGS-MOLO",
+      "clean": true,
+      "commit": "08246adb7ca39fc8869a5b3921b5167b164e1877",
+      "detached_head": false,
+      "path": "molonari_desk/backend",
+      "remote": "https://github.com/flipoyo/MOLONARI-API.git",
+      "tags": []
+    },
+    "environment": {
+      "device": "CPU · float64",
+      "jax": "0.11.2",
+      "jaxlib": "0.11.2",
+      "numpy": "2.5.4",
+      "platform": "macOS-15.5-arm64-arm-64bit-Mach-O",
+      "processor": "arm",
+      "python": "3.13.1"
+    },
+    "twin": {
+      "branch": "CGS-MOLO",
+      "clean": true,
+      "commit": "e4725c1c982e438b4e5b8e42d9d2e59d28de372c",
+      "detached_head": false,
+      "path": "Point034/twins/twin_direct",
+      "remote": "https://github.com/KeanuToofa/MOLONARI-TWIN.git",
+      "tags": []
+    },
+    "warnings": []
+  },
+  "results_format": "2.0.0",
+  "rmse_celsius": {
+    "t1": 0.12971293629520428,
+    "t2": 0.1099493156253738,
+    "t3": 0.10767390737942693,
+    "total": 0.11620092968527289
+  },
+  "sensor_cell_depths": [
+    0.098,
+    0.198,
+    0.298
+  ],
+  "twin_id": "215605ace2d915ac"
+}
